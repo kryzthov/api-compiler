@@ -76,7 +76,7 @@ public abstract class ToolDriverBase extends GenericToolDriverBase implements Mo
   /** Initializes the model. */
   private Model setupModel() {
     // Prevent INFO messages from polluting the log.
-    Logger.getLogger("").setLevel(Level.WARNING);
+    // Logger.getLogger("").setLevel(Level.WARNING);
 
     ModelBuildResult buildResult = new ModelBuilder().setup(options, this, getDataPath());
     this.diags = buildResult.getDiagCollector();

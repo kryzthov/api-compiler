@@ -52,6 +52,8 @@ ext {
       apacheCommonCli: 'commons-cli:commons-cli:1.3',
       jsonSchemaValidator: 'com.github.fge:json-schema-validator:2.0.0',
 
+      slf4jSimple: 'org.slf4j:slf4j-simple:1.7.25',
+
       // Testing
       junit: 'junit:junit:4.11',
       mockito: 'org.mockito:mockito-core:1.10.19',
@@ -84,7 +86,8 @@ dependencies {
     libraries.snakeyaml,
     libraries.jsonSchemaValidator,
     libraries.grpcCore,
-    libraries.apacheCommonCli
+    libraries.apacheCommonCli,
+    libraries.slf4jSimple
 
   testCompile libraries.junit,
     libraries.mockito,
@@ -267,7 +270,7 @@ if (JavaVersion.current().isJava8Compatible()) {
         }
     }
 }
-    
+
 if (project.hasProperty('ossrhUsername') && project.hasProperty('ossrhPassword')) {
   uploadArchives {
     repositories {
@@ -321,4 +324,3 @@ if (project.hasProperty('ossrhUsername') && project.hasProperty('ossrhPassword')
     + "and ossrhPassword properties need to be set correctly in "
     + "your ~/.gradle/gradle.properties file in order to upload archives.")
 }
-

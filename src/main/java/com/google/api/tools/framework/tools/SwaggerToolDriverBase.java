@@ -97,7 +97,7 @@ public abstract class SwaggerToolDriverBase extends GenericToolDriverBase {
 
   private Model setupModel() {
     // Prevent INFO messages from polluting the log.
-    Logger.getLogger("").setLevel(Level.WARNING);
+    // Logger.getLogger("").setLevel(Level.WARNING);
 
     try {
       serviceConfig = generateServiceConfig();
