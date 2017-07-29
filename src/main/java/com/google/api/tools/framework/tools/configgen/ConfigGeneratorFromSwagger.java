@@ -31,16 +31,16 @@ public class ConfigGeneratorFromSwagger extends SwaggerToolDriverBase implements
     super(options);
   }
 
-  @Override
-  @Nullable
-  public Service generateServiceConfig() throws IOException {
-    int exitCode = super.run();
-    if (exitCode == 1) {
-      return null;
-    } else {
-      return super.getServiceConfig();
-    }
-  }
+  // @Override
+  // @Nullable
+  // public Service generateServiceConfig() throws IOException {
+  //   int exitCode = super.run();
+  //   if (exitCode == 1) {
+  //     return null;
+  //   } else {
+  //     return super.getServiceConfig();
+  //   }
+  // }
 
   @Override
   public void process() throws Exception {
